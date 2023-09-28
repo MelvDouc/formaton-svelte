@@ -9,6 +9,7 @@
   export let required: boolean = false;
   export let disabled: boolean = false;
   export let value: any = null;
+  export let rows: number | null = null;
   export let handleInput: OptionalEventHandler = null;
 </script>
 
@@ -20,6 +21,7 @@
     name={name ?? id}
     {id}
     {placeholder}
+    {rows}
     on:input={handleInput}
     {required}
     {disabled}
