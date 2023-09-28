@@ -1,0 +1,12 @@
+@mixin formControl {
+  padding: 0.2em;
+  border: 0;
+  outline: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+@mixin circleGradient($clr1, $clr2) {
+  background: $clr1;
+  background: radial-gradient(circle, $clr2 15%, $clr1 85%);
+}
