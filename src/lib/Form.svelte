@@ -2,6 +2,7 @@
   import FormCol from "$lib/FormCol.svelte";
   import FormGroup from "$lib/groups/FormGroup.svelte";
   import FormSubmit from "$lib/groups/FormSubmit.svelte";
+  import type { OptionalEventHandler } from "$lib/types.js";
 
   export let handleSubmit: OptionalEventHandler = null;
 
