@@ -1,6 +1,7 @@
 <script lang="ts">
-  import FormLabel from "$lib/groups/FormLabel.svelte";
   import FormGroupContainer from "$lib/containers/FormGroupContainer.svelte";
+  import FormLabel from "$lib/groups/FormLabel.svelte";
+  import type { OptionalEventHandler } from "$lib/types.js";
 
   export let id: string;
   export let type: "text" | "number" | "search" | "email" | "password" = "text";

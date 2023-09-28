@@ -1,11 +1,18 @@
-<section class="form-submit">
-  <button type="submit">
-    <slot name="buttonText" />
-  </button>
-  <slot name="extra" />
+<section>
+  <div class="form-submit">
+    <button type="submit">
+      <slot name="buttonText" />
+    </button>
+    <slot name="extra" />
+  </div>
 </section>
 
 <style lang="scss">
+  section {
+    display: flex;
+    justify-content: center;
+  }
+
   .form-submit {
     width: min(100%, 400px);
     padding-top: calc(var(--svf-gap) * 4);

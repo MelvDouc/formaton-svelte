@@ -1,58 +1,44 @@
-# create-svelte
+# Formation Svelte
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+A form library for Svelte.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+## Customize
 
-## Creating a project
+The following CSS variables are used. They can be overridden to customize the forms and their elements.
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+```scss
+:root {
+  // Color Variables
+  --svf-clr-primary: #000699;
+  --svf-clr-secondary: #009b0a;
+  --svf-clr-light: #fffffa;
+  --svf-clr-danger: #ff0000;
+  --svf-clr-disabled: #808080;
+  // Sizing
+  --svf-width: min(1000px, 100%);
+  --svf-gap: 0.25em;
+  --svf-gap-rows: calc(var(--svf-gap) * 3);
+  --svf-padding: calc(var(--svf-gap) * 4);
+  --svf-border-radius: 6px;
+  // Form Colors
+  --svf-text-clr: var(--svf-clr-light);
+  --svf-bg: radial-gradient(circle, #0008ff 15%, var(--svf-clr-primary) 85%);
+  // Fonts
+  --svf-font-family: inherit;
+  // Buttons
+  --svf-btn-bg: radial-gradient(circle, #00cd0a, var(--svf-clr-secondary));
+  // Inputs
+  --svf-input-height: 2rem;
+  // Labels
+  --svf-label-asterisk-clr: var(--svf-clr-danger);
+  --svf-label-text-transform: capitalize;
+  // Toggles
+  --svf-radio-height: 18px;
+  --svf-radio-border-radius: 50%;
+  --svf-toggle-height: 22px;
+  --svf-toggle-clr-inactive: var(--svf-clr-disabled);
+  --svf-toggle-clr-active: var(--svf-clr-secondary);
+  // Selects
+  --svf-select-bg: radial-gradient(lighten(#c0c0c0, 10%), #c0c0c0);
+}
 ```

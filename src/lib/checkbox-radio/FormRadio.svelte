@@ -1,6 +1,7 @@
 <script lang="ts">
   import FormCheckboxContainer from "$lib/containers/FormCheckboxContainer.svelte";
-  import FormLabel from "../groups/FormLabel.svelte";
+  import FormLabel from "$lib/groups/FormLabel.svelte";
+  import type { OptionalEventHandler } from "$lib/types.js";
 
   export let id: string;
   export let name: string;

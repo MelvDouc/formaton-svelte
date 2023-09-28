@@ -1,6 +1,7 @@
 <script lang="ts">
-  import FormLabel from "$lib/groups/FormLabel.svelte";
   import FormGroupContainer from "$lib/containers/FormGroupContainer.svelte";
+  import FormLabel from "$lib/groups/FormLabel.svelte";
+  import type { OptionalEventHandler } from "$lib/types.js";
 
   export let id: string;
   export let name: string | null = null;
@@ -8,6 +9,7 @@
   export let required: boolean = false;
   export let disabled: boolean = false;
   export let value: any = null;
+  export let rows: number | null = null;
   export let handleInput: OptionalEventHandler = null;
 </script>
 
@@ -19,6 +21,7 @@
     name={name ?? id}
     {id}
     {placeholder}
+    {rows}
     on:input={handleInput}
     {required}
     {disabled}
