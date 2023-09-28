@@ -1,6 +1,7 @@
 <script lang="ts">
   import FormGroupContainer from "$lib/containers/FormGroupContainer.svelte";
   import FormLabel from "$lib/groups/FormLabel.svelte";
+  import type { OptionalEventHandler, SelectOption } from "$lib/types.js";
 
   export let id: string;
   export let name: string | null = null;

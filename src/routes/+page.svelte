@@ -14,9 +14,10 @@
   const animals = ["lion", "tiger", "bear"];
 
   const countries = ["USA", "UK", "France", "Japan", "China"];
-  const countryOptions: SelectOption[] = countries.map((country) => ({
+  const countryOptions = countries.map((country) => ({
     text: `${country.slice(0, 2).toUpperCase()} - ${country}`,
     value: country,
+    disabled: false,
   }));
   countryOptions.unshift({
     text: "--",
